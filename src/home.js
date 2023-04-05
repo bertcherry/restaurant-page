@@ -1,9 +1,7 @@
 import logo from './logo.jpg';
 
 const home = () => {
-    const content = document.getElementById('content');
-    const container = document.createElement('div');
-    container.id = 'container';
+    const content = document.getElementById('container');
     
     const header = document.createElement('div');
 
@@ -51,8 +49,6 @@ const home = () => {
     hours.appendChild(hoursText);
 
     container.appendChild(hours);
-
-    content.appendChild(container);
 };
 
 export default home;

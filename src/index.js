@@ -5,6 +5,7 @@ import contact from './contact';
 
 window.onload = () => {
     const content = document.getElementById('content');
+
     const nav = document.createElement('div');
     const navHome = document.createElement('button');
     navHome.addEventListener('click', () => {
@@ -32,7 +33,11 @@ window.onload = () => {
     nav.appendChild(navMenu);
     nav.appendChild(navContact);
     content.appendChild(nav);
-    
+
+    const container = document.createElement('div');
+    container.id = 'container';
+    content.appendChild(container);
+
     home();
 };
 
