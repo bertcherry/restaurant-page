@@ -7,6 +7,8 @@ window.onload = () => {
     const content = document.getElementById('content');
 
     const nav = document.createElement('div');
+    nav.classList.add('nav');
+    
     const navHome = document.createElement('button');
     navHome.addEventListener('click', () => {
             clearContainer();
