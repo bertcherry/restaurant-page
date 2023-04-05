@@ -2,6 +2,8 @@ import logo from './logo.jpg';
 
 const home = () => {
     const content = document.getElementById('content');
+    const container = document.createElement('div');
+    container.id = 'container';
     
     const header = document.createElement('div');
 
@@ -15,7 +17,7 @@ const home = () => {
     logoContainer.appendChild(logoImage);
     header.appendChild(logoContainer);
 
-    content.appendChild(header);
+    container.appendChild(header);
 
     const quote = document.createElement('div');
     
@@ -27,7 +29,7 @@ const home = () => {
     quoteAttribution.textContent = 'Seph Tacular';
     quote.appendChild(quoteAttribution);
 
-    content.appendChild(quote);
+    container.appendChild(quote);
 
     const hours = document.createElement('div');
     
@@ -48,7 +50,9 @@ const home = () => {
     hoursText.textContent = 'Please contact us to arrange your order and delivery.';
     hours.appendChild(hoursText);
 
-    content.appendChild(hours);
+    container.appendChild(hours);
+
+    content.appendChild(container);
 };
 
 export default home;
