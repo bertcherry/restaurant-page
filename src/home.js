@@ -1,8 +1,6 @@
 import logo from './logo.jpg';
 
 const home = () => {
-    const content = document.getElementById('container');
-    
     const header = document.createElement('div');
 
     const name = document.createElement('h1');
