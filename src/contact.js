@@ -2,24 +2,23 @@ const formField = (type, label) => {
     const fieldWrapper = document.createElement('div');
     fieldWrapper.classList.add('input-wrapper');
     
-    if (type != 'submit') {
-        const fieldLabel = document.createElement('label');
-        fieldLabel.setAttribute('for', label.toLowerCase());
-        fieldLabel.textContent = label;
-        fieldWrapper.appendChild(fieldLabel);
-    }
+    const fieldLabel = document.createElement('label');
+    fieldLabel.setAttribute('for', label.toLowerCase());
+    fieldLabel.textContent = label;
+    fieldWrapper.appendChild(fieldLabel);
 
     const field = document.createElement('input');
     field.setAttribute('type', type);
     field.setAttribute('name', label.toLowerCase());
     field.id = label.toLowerCase();
-    if (type == 'submit') {
-        field.setAttribute('value', 'Send');
-    }
     fieldWrapper.appendChild(field);
 
     const form = document.getElementById('contact-form');
     form.appendChild(fieldWrapper);
+}
+
+const formSubmit = () => {
+    field.setAttribute('value', 'Send');
 }
 
 const contact = () => {
@@ -37,7 +36,10 @@ const contact = () => {
     const name = formField('text', 'Name');
     const email = formField('email', 'Email');
     const message = formField('text', 'Message');
-    const submit = formField('submit', 'Send');
+    
+    const submit = document.createElement('button');
+    submit.textContent = 'Send';
+    form.appendChild(submit);
 }
 
 export default contact;
