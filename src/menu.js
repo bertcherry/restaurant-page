@@ -20,7 +20,7 @@ const menuItem = (group, name, price, description) => {
     const itemTitle = document.createElement('h3');
     itemTitle.textContent = name;
     
-    const itemPrice = document.createElement('div');
+    const itemPrice = document.createElement('h3');
     itemPrice.textContent = price;
 
     const itemDecription = document.createElement('div');
