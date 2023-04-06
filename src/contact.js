@@ -26,10 +26,6 @@ const formField = (type, label) => {
     form.appendChild(fieldWrapper);
 }
 
-const formSubmit = () => {
-    field.setAttribute('value', 'Send');
-}
-
 const contact = () => {
     const info = document.createElement('div');
     info.textContent = 'We deliver on weekend mornings by specific arrangement throughout Seattle\'s Central District, Capitol Hill, and First Hill. Contact us to set up your order!';
