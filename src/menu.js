@@ -39,7 +39,7 @@ const menu = () => {
     const beignets = menuSection('Beignets');
     const plain = menuItem('beignets', 'Plain', '$2/ea', 'Unsugared beignets ready to add jam or leave savory.')
     const powdered = menuItem('beignets', 'Powdered', '$3/ea', 'Dusted with powdered sugar for classic style.')
-    const cinnamon = menuItem('beignets', 'Plain', '$2/ea', 'Rolled in cinnamon sugar to spice up your life.')
+    const cinnamon = menuItem('beignets', 'Cinnamon', '$2/ea', 'Rolled in cinnamon sugar to spice up your life.')
 
     const sides = menuSection('Sides');
     const berry = menuItem('sides', 'Berry Jam', '$3', 'A container of homemade seasonal berry jam.')
