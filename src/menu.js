@@ -1,5 +1,6 @@
 const menuSection = (title) => {
     const div = document.createElement('div');
+    div.classList.add('menu-section');
     const divTitle = document.createElement('h2');
     divTitle.textContent = title;
     div.appendChild(divTitle);
@@ -11,6 +12,11 @@ const menuSection = (title) => {
 
 const menuItem = (group, name, price, description) => {
     const item = document.createElement('li');
+    item.classList.add('menu-item');
+
+    const itemHeader = document.createElement('div');
+    itemHeader.classList.add('item-header');
+
     const itemTitle = document.createElement('h3');
     itemTitle.textContent = name;
     
@@ -20,8 +26,9 @@ const menuItem = (group, name, price, description) => {
     const itemDecription = document.createElement('div');
     itemDecription.textContent = description;
 
-    item.appendChild(itemTitle);
-    item.appendChild(itemPrice);
+    item.appendChild(itemHeader);
+    itemHeader.appendChild(itemTitle);
+    itemHeader.appendChild(itemPrice);
     item.appendChild(itemDecription);
 
     const parentDiv = document.getElementById(group);

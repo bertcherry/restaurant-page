@@ -146,8 +146,8 @@ textarea {
     text-align: right;
 }
 
-/* Hours box styling */
-.hours {
+.hours, 
+.menu-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -164,4 +164,16 @@ textarea {
     text-align: center;
     font-size: 1.2rem;
     line-height: 2rem;
+}
+
+.menu-item {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
 }
