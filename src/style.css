@@ -1,14 +1,28 @@
 *, *:before, *:after {
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 body, html {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
     height: 100vh;
     width: 100vw;
+    color: var(--dark);
+    background-color: var(--bg);
 }
+
+:root {
+    /* Dark text on bg or bg-alt only 
+    User interface accent acceptable foreground on either bg */
+    --bg: #e6f0f4;
+    --bg-alt: #f9e3a7;
+    --shadow: #a38d76;
+    --decorative: #f78394;
+    --accent: #37818b;
+    --dark: #302a22;
+}
+
 
 #content {
     display: flex;
@@ -29,4 +43,63 @@ button {
     box-sizing: initial;
     max-width: fit-content;
     font-size: 1rem;
+    border-radius: 10px;
+    border: 2px solid var(--accent);
+    padding: .5rem 3rem;
+    background-color: var(--bg-alt);
+}
+
+button:hover {
+    transform: translate(.5px, -1px);
+    box-shadow: 3px 5px 5px var(--shadow);
+    background-color: var(--bg-alt);
+}
+
+button:active {
+    transform: translate(-1px, 2px);
+    box-shadow: none;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: max(3px, 0.15em) solid var(--accent);
+    outline-offset: max(3px, 0.15em);
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 80%;
+    margin: auto;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min-content;
+    gap: 10px;
+}
+
+.input-wrapper {
+    display: block;
+}
+
+input,
+textarea {
+    appearance: none;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 2px solid var(--accent);
+    padding: .5rem .5rem;
+    margin: max(8px, 0.5em) 0;
 }
