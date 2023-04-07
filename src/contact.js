@@ -1,6 +1,5 @@
 const formField = (type, label) => {
     const fieldWrapper = document.createElement('div');
-    fieldWrapper.classList.add('input-wrapper');
     
     const fieldLabel = document.createElement('label');
     fieldLabel.setAttribute('for', label.toLowerCase());

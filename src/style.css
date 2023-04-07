@@ -120,10 +120,6 @@ form {
     gap: 10px;
 }
 
-.input-wrapper {
-    display: block;
-}
-
 input,
 textarea {
     appearance: none;
